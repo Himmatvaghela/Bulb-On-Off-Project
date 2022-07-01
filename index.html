@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+        #container{
+            width: 45vw;
+            height: 60vh;
+            margin: auto;
+        }
+        #container img{
+            width:100%;
+            height: 100%;
+        }
+        .click{
+            display: flex;
+            justify-content: center;
+        }
+        /* .click button{
+            width: 50px;
+            height: 50px;
+        } */
+        h1{
+            text-align: center;
+        }
+        #btn1{
+            width: 5vw;
+            height: 5vh;
+            background-color: red;
+        }
+        @media screen and (max-width:500px) {
+            #btn1{
+                width: 12vw;
+                height: 8vh;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            #container{
+                width: 80vw;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Turn On & Off Bulb</h1>
+    <div id="container">
+        <!-- <img src="virat.jpg" alt="not available"> -->
+        <img src="offbulb.jpg" alt="">
+    </div>
+    <div class="click">
+        <button id="btn1">on</button>
+</div>
+    <script>
+        
+
+        var img=document.querySelector("img");
+        var btn=document.querySelector("#btn1");
+
+            btn.addEventListener('click',summ=()=>{
+                if (btn.textContent=="on") {
+                    img.src="onbulb.jpg";
+                    btn.textContent="off";
+                    btn.style.background="white"; 
+                    
+                } else {
+                    img.src='offbulb.jpg';
+                    btn.textContent="on";
+                    btn.style.background="red";
+                }
+            })
+
+    </script>
+</body>
+</html>
